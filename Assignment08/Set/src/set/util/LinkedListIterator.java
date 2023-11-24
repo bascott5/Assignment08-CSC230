@@ -1,10 +1,13 @@
 package set.util;
+
+import java.util.Iterator;
+
 /**
  * This class creates an iterator for a LinkedList
  * @Author Adam Cichoski, Bennet Scott, Caleb Free, Logan Keiper
  * @param T is a generic type of element that is being stored in each node
  */
-public class LinkedListIterator<T> {
+public class LinkedListIterator<T> implements Iterator<T>{
     ListNode<T> current;
     /**
      * Constructor to set the value for the current node
@@ -35,4 +38,18 @@ public class LinkedListIterator<T> {
     public void advance(){
         current = (isValid())? current.next: current;
     }
+    @Override
+    public boolean hasNext() {
+        if (current.next != null){
+            return true;
+        }
+        return false;
+    }
+    @Override
+    public T next() {
+        T temp = current.next.element;
+        this.advance();
+        return temp;
+    }
 }
+

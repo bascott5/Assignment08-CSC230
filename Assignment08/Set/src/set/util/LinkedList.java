@@ -1,10 +1,13 @@
 package set.util;
+
+import java.util.Iterator;
+
 /**
  * This is the class for a LinkedList
  * @Author Adam Cichoski, Bennet Scott, Caleb Free, Logan Keiper
  * @param T is a generic type to be stored in the LinkedList
  */
-public class LinkedList<T> {
+public class LinkedList<T> implements Iterable<T>{
     private ListNode<T> header;
 
     /**
@@ -109,6 +112,11 @@ public class LinkedList<T> {
             size++;
         }
         return size;
+    }
+    @Override
+    public Iterator<T> iterator() {
+        LinkedListIterator<T> marker = this.zeroth();
+        return marker;
     }
 
 }
