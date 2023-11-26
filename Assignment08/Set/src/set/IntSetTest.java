@@ -32,14 +32,14 @@ public class IntSetTest {
 
         s2.print();
 
-        GenericComparableSet<Integer> s3 = new GenericComparableSet<>(10);
+        GenericComparableSet<Integer> s3 = new GenericComparableSet<>();
         LinkedListIterator<Integer> s3marker = s3.zeroth();
             s3.insert(4, s3marker);
             s3.insert(2, s3marker);
             s3.insert(1, s3marker);
             s3.insert(5, s3marker);
             s3.insert(6, s3marker);
-        GenericComparableSet<Integer> s4 = new GenericComparableSet<>(10);
+        GenericComparableSet<Integer> s4 = new GenericComparableSet<>();
         LinkedListIterator<Integer> s4marker = s4.zeroth();
             s4.insert(5, s4marker);
             s4.insert(8, s4marker);
@@ -49,7 +49,6 @@ public class IntSetTest {
         for(Integer value: s5){
             System.out.println(value);
         }
-
 
 
 }
