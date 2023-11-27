@@ -4,7 +4,7 @@ import set.util.*;
 public class GenericSetTest {
     public static void main(String[] args) {
         System.out.println("Testing insert method...");
-        GenericComparableSet<Integer> s1 = new GenericComparableSet<>();
+        LinkedListSet<Integer> s1 = new LinkedListSet<>();
         LinkedListIterator<Integer> s3marker = s1.zeroth();
         s1.insert(4, s3marker);
         s1.insert(2, s3marker);
@@ -15,7 +15,7 @@ public class GenericSetTest {
         System.out.print("All elements in s1: ");
         s1.printList(s1); // output: 4 2 1 5 6
         
-        GenericComparableSet<Integer> s2 = new GenericComparableSet<>();
+        LinkedListSet<Integer> s2 = new LinkedListSet<>();
         LinkedListIterator<Integer> s4marker = s2.zeroth();
         s2.insert(5, s4marker);
         s2.insert(8, s4marker);
@@ -26,7 +26,7 @@ public class GenericSetTest {
         s2.printList(s2); // output: 5 8 9 1
         
         System.out.print("\nTesting unionLinkedList method...");
-        GenericComparableSet<Integer> s5 = s1.unionLinkedList(s2);
+        LinkedListSet<Integer> s5 = s1.unionLinkedList(s2);
         
         System.out.print("\nUnion of s1 and s2: ");
         for(Integer value : s5){

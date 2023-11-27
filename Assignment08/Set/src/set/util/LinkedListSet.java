@@ -93,7 +93,7 @@ public class LinkedListSet<T extends Comparable<? super T>> extends LinkedList<T
      */
     public LinkedListSet<T> intersection(LinkedListSet<T> set){
         LinkedListSet<T> intersectSet = new LinkedListSet<>();
-        LinkedListIterator marker = setList.zeroth(), newSet = intersectSet.zeroth();
+        LinkedListIterator<T> marker = setList.zeroth(), newSet = intersectSet.zeroth();
         for(;marker.isValid();marker.advance()){
             if(set.contains((T) marker.retrieve())){
                 intersectSet.insert((T) marker.retrieve(), newSet);
