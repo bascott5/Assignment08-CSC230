@@ -8,7 +8,7 @@ import java.util.Iterator;
  * @param T is a generic type of element that is being stored in each node
  */
 public class LinkedListIterator<T> implements Iterator<T>{
-    ListNode<T> current;
+    protected ListNode<T> current;
     /**
      * Constructor to set the value for the current node
      * @param node

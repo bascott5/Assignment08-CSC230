@@ -1,11 +1,15 @@
 package set.util;
 
+import set.SetException;
 
-public class GenericComparableSet<T extends Comparable<? super T>> extends LinkedList<T> {
+public class LinkedListSet<T extends Comparable<? super T>> extends LinkedList<T> {
     private int cardinality = 0;
     private LinkedList<T> setList;
 
-    public GenericComparableSet() {
+    /**
+     * This constructor sets the cardinality and initializes the LinkedList
+     */
+    public LinkedListSet() {
         this.cardinality = 0;
         this.setList = new LinkedList<T>();
     }
@@ -16,8 +20,8 @@ public class GenericComparableSet<T extends Comparable<? super T>> extends Linke
      * @param list that will be combined with this
      * @return Set whose values are combined from this and set
      */
-    public GenericComparableSet<T> unionLinkedList(GenericComparableSet<T> set) {
-        GenericComparableSet<T> unionSet = new GenericComparableSet<T>();
+    public LinkedListSet<T> unionLinkedList(LinkedListSet<T> set) {
+        LinkedListSet<T> unionSet = new LinkedListSet<T>();
 
         LinkedListIterator<T> marker1;
         LinkedListIterator<T> marker2;
@@ -58,9 +62,8 @@ public class GenericComparableSet<T extends Comparable<? super T>> extends Linke
      */
     public void insert(T newElement, LinkedListIterator<T> p) {
             if (!contains(newElement) && p.isValid()) {
-            p.current.next = new ListNode<T>(newElement, p.current.next);
+            setList.insert(newElement, p);
             cardinality++;
-            p.advance();
         }
     }
 
@@ -78,10 +81,34 @@ public class GenericComparableSet<T extends Comparable<? super T>> extends Linke
 
     /**
      * Gets a sets Cardinality
-     * @return cardinality of this
+     * @return cardinality this
      */
     public int getCardinality() {
         return cardinality;
+    }
+    /**
+     * Creates a new list consisting of the intersecting values of different sets
+     * @param set is the set to be compared to this set
+     * @return intersection set
+     */
+    public LinkedListSet<T> intersection(LinkedListSet<T> set){
+        LinkedListSet<T> intersectSet = new LinkedListSet<>();
+        LinkedListIterator marker = setList.zeroth(), newSet = intersectSet.zeroth();
+        for(;marker.isValid();marker.advance()){
+            if(set.contains((T) marker.retrieve())){
+                intersectSet.insert((T) marker.retrieve(), newSet);
+                newSet.advance();
+            }
+        }
+        return set;
+
+    }
+
+    /**
+     * This prints out the set
+     */
+    public void print(){
+        LinkedList.printList(setList);
     }
 
 }
