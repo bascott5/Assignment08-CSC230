@@ -8,7 +8,7 @@ import java.util.Iterator;
  * @param T is a generic type to be stored in the LinkedList
  */
 public class LinkedList<T> implements Iterable<T>{
-    private ListNode<T> header;
+    protected ListNode<T> header;
 
     /**
      * Constructing the LinkedList to have a null header
@@ -113,6 +113,9 @@ public class LinkedList<T> implements Iterable<T>{
         }
         return size;
     }
+    /**
+     * This method 
+     */
     @Override
     public Iterator<T> iterator() {
         LinkedListIterator<T> marker = this.zeroth();
