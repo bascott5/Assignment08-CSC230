@@ -13,7 +13,7 @@ public class GenericSetTest {
         s1.insert(6, s3marker);
         
         System.out.print("All elements in s1: ");
-        LinkedListSet.printList(s1); // output: 6 5 1 2 4
+        s1.print(); // output: 6 5 1 2 4
         
         LinkedListSet<Integer> s2 = new LinkedListSet<>();
         LinkedListIterator<Integer> s4marker = s2.zeroth();
@@ -23,14 +23,14 @@ public class GenericSetTest {
         s2.insert(1, s4marker);
         
         System.out.print("All elements in s2: ");
-        LinkedListSet.printList(s2); // output: 1 9 8 5
+        s2.print(); // output: 1 9 8 5
         
         System.out.print("\nTesting unionLinkedList method...");
         LinkedListSet<Integer> s5 = s1.unionLinkedList(s2);
         
         System.out.print("\nUnion of s1 and s2: ");
         for(Integer value : s5){
-            System.out.print(value + " "); // output: 4 2 1 5 6 8 9
+            System.out.print(value + " "); // output: 8 9 4 2 5 6 1
         }
 
         System.out.println("\n\nTesting contains method...");
@@ -57,7 +57,7 @@ public class GenericSetTest {
 
         System.out.println("\nTesting isEmpty and makeEmpty methods...");
         System.out.println("Is s1 empty?: " + s1.isEmpty());
-        s1.makeEmpty();
+        s1.clear();
         System.out.println("Is s1 empty after being emptied?: " + s1.isEmpty());
         System.out.println("Is s2 empty?: " + s2.isEmpty());
     }

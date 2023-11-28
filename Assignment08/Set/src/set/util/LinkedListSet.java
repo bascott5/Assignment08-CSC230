@@ -106,7 +106,14 @@ public class LinkedListSet<T extends Comparable<? super T>> extends LinkedList<T
      * This prints out the set
      */
     public void print(){
-        LinkedList.printList(setList);
+        LinkedList.printList(this);
+    }
+
+    /**
+     * Clears a set
+     */
+    public void clear(){
+        this.makeEmpty();
     }
 
 }
