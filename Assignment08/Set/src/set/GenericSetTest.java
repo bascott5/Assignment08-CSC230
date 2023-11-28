@@ -13,7 +13,7 @@ public class GenericSetTest {
         s1.insert(6, s3marker);
         
         System.out.print("All elements in s1: ");
-        s1.printList(s1); // output: 4 2 1 5 6
+        LinkedListSet.printList(s1); // output: 6 5 1 2 4
         
         LinkedListSet<Integer> s2 = new LinkedListSet<>();
         LinkedListIterator<Integer> s4marker = s2.zeroth();
@@ -23,7 +23,7 @@ public class GenericSetTest {
         s2.insert(1, s4marker);
         
         System.out.print("All elements in s2: ");
-        s2.printList(s2); // output: 5 8 9 1
+        LinkedListSet.printList(s2); // output: 1 9 8 5
         
         System.out.print("\nTesting unionLinkedList method...");
         LinkedListSet<Integer> s5 = s1.unionLinkedList(s2);

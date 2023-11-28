@@ -1,7 +1,5 @@
 package set.util;
 
-import set.SetException;
-
 public class LinkedListSet<T extends Comparable<? super T>> extends LinkedList<T> {
     private int cardinality = 0;
     private LinkedList<T> setList;
