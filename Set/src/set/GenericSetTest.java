@@ -1,5 +1,8 @@
 package set;
 
+import set.LinkedListClasses.LinkedListIterator;
+import set.LinkedListClasses.LinkedListSet;
+
 /**
  * This class contains the method with all of the test cases for the Generic
  * Set.
@@ -22,7 +25,7 @@ public class GenericSetTest {
         s1.insert(6, s3marker);
         
         System.out.print("All elements in s1: ");
-        s1.printList(s1); // output: 4 2 1 5 6
+        s1.print(); // output: 6 5 1 2 4
         
         LinkedListSet<Integer> s2 = new LinkedListSet<>();
         LinkedListIterator<Integer> s4marker = s2.zeroth();
@@ -32,7 +35,7 @@ public class GenericSetTest {
         s2.insert(1, s4marker);
         
         System.out.print("All elements in s2: ");
-        s2.printList(s2); // output: 5 8 9 1
+        s2.print(); // output: 1 9 8 5
         
         System.out.print("\nTesting unionLinkedList method...");
         LinkedListSet<Integer> s5 = s1.unionLinkedList(s2);
@@ -40,7 +43,7 @@ public class GenericSetTest {
         System.out.print("\nUnion of s1 and s2: ");
         // works with an enhanced for loop
         for (Integer value : s5){
-            System.out.print(value + " "); // output: 4 2 1 5 6 8 9
+            System.out.print(value + " "); // output: 8 9 4 2 5 6 1
         }
 
         System.out.println("\n\nTesting contains method...");

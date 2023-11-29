@@ -1,4 +1,4 @@
-package set;
+package set.LinkedListClasses;
 
 /**
  * This class is used to create nodes for a linked list.

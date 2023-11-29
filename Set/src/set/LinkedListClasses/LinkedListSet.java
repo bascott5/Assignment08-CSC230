@@ -1,4 +1,4 @@
-package set;
+package set.LinkedListClasses;
 
 /**
  * This class represents the combination between both a Linked List and a Set.
@@ -113,7 +113,7 @@ public class LinkedListSet<T extends Comparable<? super T>> extends LinkedList<T
      * This prints out the set.
      */
     public void print(){
-        LinkedList.printList(setList);
+        LinkedList.printList(this);
     }
 
 }
