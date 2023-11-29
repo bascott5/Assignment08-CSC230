@@ -1,1 +1,1 @@
-# Assignment08-CSC230 Adam Cichoski, Bennet Scott, Caleb Free, Logan Keiper
+# Assignment08-CSC230 Adam Cichoski, Bennett Scott, Caleb Free, Logan Keiper
