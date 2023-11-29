@@ -1,5 +1,4 @@
 package set;
-import set.SetException;
 
 /**
  * This class represents the combination between both a Linked List and a Set.
