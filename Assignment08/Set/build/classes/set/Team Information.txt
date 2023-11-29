@@ -1,4 +1,0 @@
-- Adam Cichoski: 
-- Bennett Scott: Managed the Git repository for the group, created all of the test cases, and formatted code.
-- Caleb Free:
-- Logan Keiper:
