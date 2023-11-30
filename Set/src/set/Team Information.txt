@@ -1,4 +1,4 @@
-- Adam Cichoski: 
+- Adam Cichoski: Created LinkedList, ListNode, LinkedListIterator, and wrote some of the methods like interection.
 - Bennett Scott: Managed the Git repository for the group, created all of the test cases, and formatted code.
 - Caleb Free: Created ListLinkedSet class with implemented generics, helped create and optomize union, insert, contains, and print methods.
 - Logan Keiper: formatted and proofread code, helped made sure test cases were working correctly.
